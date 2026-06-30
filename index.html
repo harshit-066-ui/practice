@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #0078ff;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #0078ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        .counter-box {
+            margin-top: 40px;
+        }
+
+        #count {
+            font-size: 40px;
+            color: #0078ff;
+            margin: 15px 0;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>My Website</h2>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to My Website</h1>
+
+    <p>
+        This is a simple webpage built using HTML, CSS, and JavaScript
+        inside a single index.html file.
+    </p>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <div class="counter-box">
+        <h2>Counter</h2>
+
+        <div id="count">0</div>
+
+        <button onclick="increaseCounter()">Increase</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 My Website. All Rights Reserved.
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Hello! Welcome to the website.");
+    }
+
+    let count = 0;
+
+    function increaseCounter() {
+        count++;
+        document.getElementById("count").textContent = count;
+    }
+</script>
+
+</body>
+</html>
